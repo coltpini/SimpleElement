@@ -1,5 +1,5 @@
 {
-  "name": "@coltpini/simple-element",
+  "name": "simple-custom-element",
   "version": "1.0.0",
   "description": "Convenience Class for Custom Elements",
   "main": "simple-element.js",
