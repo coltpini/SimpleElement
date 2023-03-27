@@ -1,6 +1,6 @@
 {
   "name": "simple-custom-element",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Convenience Class for Custom Elements",
   "main": "simple-element.js",
   "type": "module",
@@ -10,7 +10,8 @@
   },
   "scripts": {
     "test": "NODE_OPTIONS=--experimental-vm-modules npx jest",
-    "test.watch": "NODE_OPTIONS=--experimental-vm-modules npx jest --watch"
+    "test.watch": "NODE_OPTIONS=--experimental-vm-modules npx jest --watch",
+    "min": "terser ./simple-element.js --compress --mangle --keep-classnames --module --output simple-element-min.js"
   },
   "author": "",
   "license": "ISC",
