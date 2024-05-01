@@ -1,6 +1,6 @@
 {
   "name": "simple-custom-element",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Convenience Class for Custom Elements",
   "main": "simple-element.js",
   "type": "module",

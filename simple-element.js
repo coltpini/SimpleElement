@@ -29,7 +29,7 @@ export class SimpleElement extends HTMLElement {
           return this.getAttribute(key);
         },
         set(val) {
-          if (val) this.setAttribute(key, val);
+          if (!!val) this.setAttribute(key, val);
           else this.removeAttribute(key);
         },
       };
@@ -40,7 +40,7 @@ export class SimpleElement extends HTMLElement {
             return this.hasAttribute(key);
           },
           set(val) {
-            if (val) this.setAttribute(key, "");
+            if (!!val) this.setAttribute(key, "");
             else this.removeAttribute(key);
           },
         };
@@ -52,7 +52,7 @@ export class SimpleElement extends HTMLElement {
             return parseFloat(this.getAttribute(key));
           },
           set(val) {
-            if (val) this.setAttribute(key, val);
+            if (!!val || val === 0) this.setAttribute(key, val);
             else this.removeAttribute(key);
           },
         };
@@ -64,7 +64,7 @@ export class SimpleElement extends HTMLElement {
             return JSON.parse(this.getAttribute(key));
           },
           set(val) {
-            if (val) {
+            if (!!val) {
               if (typeof val === "string") this.setAttribute(key, val);
               else this.setAttribute(key, JSON.stringify(val));
             } else this.removeAttribute(key);

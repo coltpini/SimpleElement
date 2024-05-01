@@ -52,8 +52,16 @@ export const propsTest = (css, html, SimpleElement) => {
       expect(tp.num).toBe(1);
       expect(typeof tp.num).toBe("number");
 
+      tp.num = 0;
+      expect(tp.num).toBe(0);
+      expect(typeof tp.num).toBe("number");
+
       tp.num = 1.23;
       expect(tp.num).toBe(1.23);
+      expect(typeof tp.num).toBe("number");
+
+      tp.num = -1.23;
+      expect(tp.num).toBe(-1.23);
       expect(typeof tp.num).toBe("number");
 
       tp.num = "billy";
