@@ -1,7 +1,10 @@
 const out = (strings, ...args) =>
-  strings.map((str, i) => `${str}${args[i] || ""}`).join("");
-export const html = (strings, ...args) => out(strings, args);
-export const css = (strings, ...args) => out(strings, args);
+  strings
+    .map((str, i) => `${str}${typeof args[i] !== "undefined" ? args[i] : ""}`)
+    .join("");
+
+export const html = out;
+export const css = out;
 
 const buildShadowRoot = (html, elem) => {
   const template = document.createElement("template");

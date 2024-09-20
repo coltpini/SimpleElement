@@ -37,6 +37,7 @@ export const propsTest = (css, html, SimpleElement) => {
       tp.str = "str";
       expect(tp.str).toBe("str");
       expect(typeof tp.str).toBe("string");
+      expect(tp.getAttribute("str")).toBe("str");
 
       tp.str = 123;
       expect(tp.str).toBe("123");
